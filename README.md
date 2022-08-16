@@ -12,3 +12,7 @@ Part `Start`
 6. Install cors & morgan(in terminale have log requests)
 7. Create models add mongoose
 8. Connect to Mongo
+
+Part `Authorization(server)`
+
+1. Creating registrations
