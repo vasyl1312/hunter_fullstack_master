@@ -1,6 +1,10 @@
 module.exports.login = function (req, res) {
   res.status(200).json({
-    login: 'from controller',
+    //при запиті логіна потрібно відправити емейл і пароль
+    login: {
+      email: req.body.email,
+      password: req.body.password,
+    },
   })
 }
 
