@@ -8,8 +8,10 @@ const positionRoutes = require('./routes/position')
 
 const app = express()
 
+app.use(require('morgan')('dev'))
 app.use(bodyParser.urlencoded({ extended: true })) //підключаємо додатковий плагін
 app.use(bodyParser.json())
+app.use(require('cors')())
 
 app.use('/api/auth', authRoutes) //по якому шляху
 app.use('/api/analytics', analyticsRoutes)
