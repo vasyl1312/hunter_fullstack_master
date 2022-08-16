@@ -11,3 +11,4 @@ Part `Start`
 5. Parsing info of user(install parser), testing in postman
 6. Install cors & morgan(in terminale have log requests)
 7. Create models add mongoose
+8. Connect to Mongo
