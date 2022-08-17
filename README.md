@@ -16,3 +16,4 @@ Part `Start`
 Part `Authorization(server)`
 
 1. Creating registrations
+2. Checking existing email and created a new account, hashing password
