@@ -2,6 +2,7 @@ const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const User = require('../models/User')
 const keys = require('../config/keys')
+const errorHandler = require('../utils/errorHandler')
 
 module.exports.login = async function (req, res) {
   const candidate = await User.findOne({ email: req.body.email }) //check чи вже існує user з таким email
@@ -41,7 +42,7 @@ module.exports.register = async function (req, res) {
       await user.save() //зберегти користувача
       res.status(201).json(user) //201-created
     } catch (error) {
-      console.log(error) //обробити помилку
+      errorHandler(res, error) //обробити помилку
     }
   }
 }
