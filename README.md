@@ -17,3 +17,4 @@ Part `Authorization(server)`
 
 1. Creating registrations
 2. Checking existing email and created a new account, hashing password
+3. Login to the server, check the password, token

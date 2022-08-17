@@ -1,14 +1,29 @@
 const bcrypt = require('bcryptjs')
+const jwt = require('jsonwebtoken')
 const User = require('../models/User')
+const keys = require('../config/keys')
 
-module.exports.login = function (req, res) {
-  res.status(200).json({
-    //при запиті логіна потрібно відправити емейл і пароль
-    login: {
-      email: req.body.email,
-      password: req.body.password,
-    },
-  })
+module.exports.login = async function (req, res) {
+  const candidate = await User.findOne({ email: req.body.email }) //check чи вже існує user з таким email
+  if (!candidate) {
+    res.status(404).json({ message: 'Такого email немає в базі' }) //404 client error-not found email
+  } else {
+    const passwordResult = bcrypt.compareSync(req.body.password, candidate.password) //перевіряємо пароль
+    if (passwordResult) {
+      const token = jwt.sign(
+        {
+          email: candidate.email,
+          userId: candidate._id,
+        },
+        keys.jwt, //секретний ключ в config
+        { expiresIn: 60 * 60 } //час життя токена
+      ) //генеруємо токен
+
+      res.status(200).json({ token: `Bearer ${token}` })
+    } else {
+      res.status(401).json({ message: 'Неправильний пароль' }) //401 Unauthorized
+    }
+  }
 }
 
 module.exports.register = async function (req, res) {
