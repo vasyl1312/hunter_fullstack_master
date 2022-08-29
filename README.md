@@ -20,3 +20,8 @@ Part `Authorization(server)`
 3. Login to the server, check the password, token
 4. Seccure routes with passport js(another routes can use only register user) and when we want to register with facebook or google...
 5. Unique error handling
+
+Part `API`
+
+1. Get all positions and posotions logics
+2. Position functionality(controller)
