@@ -24,4 +24,5 @@ Part `Authorization(server)`
 Part `API`
 
 1. Get all positions and posotions logics
-2. Position functionality(controller)
+2. Position functionality(controller) look to file routes
+3. Get and delete categories
