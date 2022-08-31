@@ -29,3 +29,7 @@ Part `API`
 4. Configuration uploading file (install moment & multer)
 5. Create/update categories, passport errors (secure for non user)
 6. Ordering
+
+Part `Authorization (client)`
+
+1. Generation app to client folder (Angular) in docs setup
