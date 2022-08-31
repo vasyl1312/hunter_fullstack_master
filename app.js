@@ -19,6 +19,7 @@ app.use(passport.initialize()) //ініціалізуєм паспорт
 require('./middleware/passport')(passport)
 
 app.use(require('morgan')('dev'))
+app.use('/uploads', express.static('uploads')) //дозволяє доступ до картинок напряму
 app.use(bodyParser.urlencoded({ extended: true })) //підключаємо додатковий плагін
 app.use(bodyParser.json())
 app.use(require('cors')())
