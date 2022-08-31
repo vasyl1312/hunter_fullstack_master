@@ -4,12 +4,12 @@ const upload = require('../middleware/upload')
 const controller = require('../controllers/category')
 const router = express.Router()
 
-router.get('/', passport.authenticate('jwt', { session: false }), controller.getAll) //захист passport
+router.get('/', passport.authenticate('jwt', { session: false }), controller.getAll)
 router.get('/:id', passport.authenticate('jwt', { session: false }), controller.getById)
 router.delete('/:id', passport.authenticate('jwt', { session: false }), controller.remove)
 router.post(
   '/',
-  passport.authenticate('jwt', { session: false }),
+  passport.authenticate('jwt', { session: false }), //захист passport = secure for non user
   upload.single('image'),
   controller.create
 ) //single що завантажуєм тільки 1 файл, поле image

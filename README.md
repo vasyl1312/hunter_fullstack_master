@@ -27,4 +27,5 @@ Part `API`
 2. Position functionality (controller) look to file routes
 3. Get and delete categories
 4. Configuration uploading file (install moment & multer)
-5. Create/update categories, passport errors
+5. Create/update categories, passport errors (secure for non user)
+6. Ordering
