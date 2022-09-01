@@ -35,3 +35,4 @@ Part `Authorization (client)`
 1. Generation app to client folder (Angular) in docs setup
 2. Start setting (install cuncurrently (npm docs))
 3. Theme setting to folder theme (materialize by vladilen https://github.com/vladilenm/fullstack-theme)
+4. Proxy setting
