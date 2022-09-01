@@ -33,3 +33,4 @@ Part `API`
 Part `Authorization (client)`
 
 1. Generation app to client folder (Angular) in docs setup
+2. Start setting (install cuncurrently (npm docs))
