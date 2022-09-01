@@ -36,3 +36,4 @@ Part `Authorization (client)`
 2. Start setting (install cuncurrently (npm docs))
 3. Theme setting to folder theme (materialize by vladilen https://github.com/vladilenm/fullstack-theme)
 4. Proxy setting
+5. Routing create; in clien generate (ng generate component --skip-tests=true login-page) //hard
